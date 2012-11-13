@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Name: MyString
+  UserId: 
+  image_url: 
+  Price: 9.99
+
+two:
+  Name: MyString
+  UserId: 
+  image_url: 
+  Price: 9.99

@@ -1,0 +1,36 @@
+
+<div id="participant_list">
+  <h1>Listing Participants</h1>
+
+  <table>
+  <% @participants.each do |participant| %>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+
+      <td>
+        <%= image_tag(participant.image_url, :class => 'list_image') %>
+      </td>
+
+      <td class="list_description">
+        <dl>
+          <dt><%= participant.Name %></dt>
+          <dd><%= truncate(strip_tags(participant.UserId),
+                 :length => 80) %></dd>
+        </dl>
+      </td>
+
+      <td class="list_actions">
+        <%= link_to 'Show', participant %><br/>
+        <%= link_to 'Edit', edit_participant_path(participant) %><br/>
+        <%= link_to 'Destroy', participant, 
+                    :confirm => 'Are you sure?',
+                    :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+
+<br />
+
+<%= link_to 'New Participant', new_participant_path %>
+

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @participant.Name %>
+</p>
+
+<p>
+  <b>Userid:</b>
+  <%= @participant.UserId %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @participant.image_url %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @participant.Price %>
+</p>
+
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Back', participants_path %>
