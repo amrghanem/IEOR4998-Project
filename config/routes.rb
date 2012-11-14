@@ -1,4 +1,6 @@
 Survey::Application.routes.draw do
+  resources :survey_forms
+
   resources :participants
 
   get "welcome/hello"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121113103936) do
+ActiveRecord::Schema.define(:version => 20121114063935) do
 
   create_table "participants", :force => true do |t|
     t.string   "Name"
@@ -19,6 +19,12 @@ ActiveRecord::Schema.define(:version => 20121113103936) do
     t.decimal  "Price",      :precision => 8, :scale => 2
     t.datetime "created_at",                               :null => false
     t.datetime "updated_at",                               :null => false
+  end
+
+  create_table "survey_forms", :force => true do |t|
+    t.string   "Question"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
