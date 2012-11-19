@@ -1,4 +1,8 @@
 Survey::Application.routes.draw do
+  resources :models
+
+  resources :users
+
   resources :survey_forms
 
   resources :participants

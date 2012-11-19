@@ -1,6 +1,6 @@
 
 <div id="participant_list">
-  <h1>Listing Participants</h1>
+  <h1>IEOR 4998 Survey Tool Participants</h1>
 
   <table>
   <% @participants.each do |participant| %>
@@ -33,4 +33,5 @@
 <br />
 
 <%= link_to 'New Participant', new_participant_path %>
+<p> <%= link_to "Log Out", welcome_goodbye_path %> </p>
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114063935) do
+ActiveRecord::Schema.define(:version => 20121119003304) do
 
   create_table "participants", :force => true do |t|
     t.string   "Name"
@@ -22,9 +22,20 @@ ActiveRecord::Schema.define(:version => 20121114063935) do
   end
 
   create_table "survey_forms", :force => true do |t|
-    t.string   "Question"
+    t.string   "Survey"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "Login"
+    t.string   "Name"
+    t.string   "Password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "ImageUrl"
+    t.string   "ImageLink"
   end
 
 end

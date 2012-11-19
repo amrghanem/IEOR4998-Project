@@ -7,6 +7,7 @@
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
 Participant.delete_all
+User.delete_all
 
 Participant.create(:Name => 'Buster',
   :UserId => 'BPosey', 
@@ -23,3 +24,13 @@ Participant.create(:Name => 'Timon',
   :UserId => 'TKoehler', 
   :image_url =>   '/Images/Timon.jpg',    
   :Price => 59.99)
+  
+User.create(:Login => 'aghanem',
+	:Name => 'Amr Ghanem',
+	:Password => 'password',
+	:ImageLink => '/Images/Amr.jpg')
+
+User.create(:Login => 'ATruong',
+	:Name => 'Andy Truong',
+	:Password => 'password',
+	:ImageLink => '/Images/Andy.jpg')

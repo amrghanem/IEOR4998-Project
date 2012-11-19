@@ -1,8 +1,8 @@
-<h1>Survey Form</h1>
+<h1>Listing survey_forms</h1>
 
 <table>
   <tr>
-    <th>Question</th>
+    <th>Survey</th>
     <th></th>
     <th></th>
     <th></th>
@@ -10,7 +10,7 @@
 
 <% @survey_forms.each do |survey_form| %>
   <tr>
-    <td><%= survey_form.Question %></td>
+    <td><%= survey_form.Survey %></td>
     <td><%= link_to 'Show', survey_form %></td>
     <td><%= link_to 'Edit', edit_survey_form_path(survey_form) %></td>
     <td><%= link_to 'Destroy', survey_form, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -20,4 +20,4 @@
 
 <br />
 
-<%= link_to 'Add Questions', new_survey_form_path %>
+<%= link_to 'New Survey form', new_survey_form_path %>
